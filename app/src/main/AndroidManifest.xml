@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".WishListActivity"></activity>
+        <activity android:name=".WishlistActivity2"></activity>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".MovieActivity" />

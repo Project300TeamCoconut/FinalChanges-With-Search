@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // go to wish list activity
     public void goToWishList(View view) {
-        Intent intent = new Intent(getApplicationContext(), WishListActivity.class);
+        Intent intent = new Intent(getApplicationContext(), WishlistActivity2.class);
 
         //pass the myWishList to the wish list activity
         intent.putExtra("myWatchlist", myWishList);
@@ -269,12 +269,10 @@ public class MainActivity extends AppCompatActivity {
 
         DatabaseReference userDbNope = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("connections").child("nope");
 
-        DatabaseReference userDbWatchList = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("connections").child("WatchList");
 
         userDbMatches.removeValue();
         userDbNope.removeValue();
         userDbYep.removeValue();
-        userDbWatchList.removeValue();
     }
 
     public void goSearch(View view) {
